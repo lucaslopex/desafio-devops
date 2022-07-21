@@ -1,7 +1,7 @@
 FROM node:15
 
 WORKDIR /usr/src/app
-
+#Instalação da dependencias
 COPY package*.json ./
 
 RUN npm install
@@ -17,5 +17,5 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
 EXPOSE 3000
-
+#Start no index.js
 CMD [ "node", "index.js" ]

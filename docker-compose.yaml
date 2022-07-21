@@ -41,6 +41,7 @@ services:
             - node-network
         ports: 
             - "8080:80"
+#Criação da rede declarada
 networks:
   node-network:
     driver:
